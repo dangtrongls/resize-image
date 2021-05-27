@@ -8,13 +8,23 @@
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
+        "@serializedowen/vue-img-watermark": "^1.1.0",
+        "axios": "^0.21.1",
         "boostrap": "^2.0.0",
         "bootstrap-vue": "^2.21.2",
         "core-js": "^3.6.5",
         "pug": "^3.0.2",
         "vue": "^2.6.11",
+        "vue-axios": "^3.2.4",
         "vue-croppie": "^2.0.2",
-        "vue-router": "^3.5.1"
+        "vue-router": "^3.5.1",
+        "vue-sidebar-menu": "^4.7.4",
+        "vue-toast-notification": "^0.6.1",
+        "vue-toasted": "^1.1.28",
+        "vue-toastification": "^1.7.11",
+        "vuejs-clipper": "^3.1.2",
+        "watermark": "^1.0.2",
+        "watermarkjs": "^2.1.1"
     },
     "devDependencies": {
         "@babel/polyfill": "^7.11.5",
@@ -27,10 +37,11 @@
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^6.2.2",
         "mutationobserver-shim": "^0.3.7",
+        "node-sass": "^6.0.0",
         "popper.js": "^1.16.1",
         "portal-vue": "^2.1.7",
         "sass": "^1.26.11",
-        "sass-loader": "^10.0.2",
+        "sass-loader": "^10.2.0",
         "vue-cli-plugin-bootstrap-vue": "~0.7.0",
         "vue-template-compiler": "^2.6.11"
     },

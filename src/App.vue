@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      
+      <router-link to="/resize/facebook">Facebook</router-link> |
+      <router-link to="/resize/shopee">Shopee</router-link> |
+      <router-link to="/resize/instagram">Instagram</router-link> |
+      <router-link to="/resize/tiktok">Tiktok</router-link> |
+      <router-link to="/resize/watermark">Watermark</router-link>
     </div>
     <router-view/>
   </div>
