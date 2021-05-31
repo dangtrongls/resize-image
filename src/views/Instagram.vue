@@ -31,16 +31,6 @@
                 ></b-icon>
                 Auto</b-button
               >
-               <!-- <b-button
-                variant="primary"
-                v-if="file && height == height_default && width == width_default"
-                @click="crop"
-                ><b-icon
-                  icon="scissors"
-                  aria-hidden="true"
-                ></b-icon>
-                Crop</b-button
-              > -->
             </div>
             <div v-if="!checkImage && file">
               <span>Height: {{ height }}px</span>&nbsp;
@@ -111,17 +101,6 @@ export default {
         this.cropped = this.croppieImage = output;
       });
     },
-    // image_default() {
-    //   // console.log('1223');
-    //   let options = {
-    //     type: "base64",
-    //     size: { width: this.width, height: this.height },
-    //     format: "jpeg/jpg/png",
-    //   };
-    //   this.$refs.croppieRef.result(options, (output) => {
-    //     this.cropped = this.croppieImage = output;
-    //   });
-    // },
     check_image() {
       let _show = Object.assign({}, this.checkImage);
       _show = !_show;

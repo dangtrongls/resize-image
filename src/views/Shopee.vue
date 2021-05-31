@@ -31,16 +31,6 @@
                 ></b-icon>
                 Auto</b-button
               >
-               <!-- <b-button
-                variant="primary"
-                v-if="file && height == height_default && width == width_default"
-                @click="crop"
-                ><b-icon
-                  icon="scissors"
-                  aria-hidden="true"
-                ></b-icon>
-                Crop</b-button
-              > -->
             </div>
             <div v-if="!checkImage && file">
               <span>Height: {{ height }}px</span>&nbsp;
