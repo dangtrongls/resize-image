@@ -4,8 +4,8 @@
     <input type="file" @change="croppie" />
     <b-container fluid class="bv-example-row">
       <b-row class="mb-2">
-        <b-col>{{ text }}</b-col>
-        <b-col>
+        <b-col></b-col>
+        <b-col class="content">
           <vue-croppie
             ref="croppieRef"
             :enableOrientation="true"
@@ -14,10 +14,16 @@
             :enableExif="true"
           >
           </vue-croppie>
+        <div>
+    
+      <div class="mt-2"></div>
+    </div>
         </b-col>
         <b-col order="" v-if="file">
           <div style="border-style: dotted">
             <div class="mt-3 mb-3">
+             <b-button variant="warning" @click="addText" ><b-icon icon="plus" aria-hidden="true"></b-icon>Add text</b-button> &nbsp;
+              <b-button variant="primary" @click="addImage"><b-icon icon="plus" aria-hidden="true"></b-icon>Add image</b-button> &nbsp;
               <b-button variant="success" @click="check_image"
                 ><b-icon icon="check2" aria-hidden="true"></b-icon>
                 Check</b-button
@@ -48,17 +54,9 @@
         <b-col v-else></b-col>
       </b-row>
     </b-container>
-    <div>
-      <b-form-input
-        v-model="text"
-        name="text"
-        placeholder="Text"
-      ></b-form-input>
-      <div class="mt-2"></div>
-    </div>
     <div v-if="cropped && file">
       <b-container fluid class="bv-example-row">
-        <b-row class="mb-2">
+        <b-row class="mb-2">  
           <b-col></b-col>
           <b-col><img :src="cropped" /></b-col>
           <b-col>
@@ -77,6 +75,7 @@
   </div>
 </template>
 <script>
+// import Moveable from 'vue-moveable';
 export default {
   data() {
     return {
@@ -92,6 +91,7 @@ export default {
       er: null,
       text: "",
       errors: [],
+      // addText: false
     };
   },
   components: {},
@@ -164,6 +164,12 @@ export default {
         }
       );
     },
+    addText() {
+      alert('Đang cập nhập')
+    },
+    addImage() {
+      alert('Đang cập nhập');
+    },
     downloadFile() {
       var name = this.file;
       console.log(name);
@@ -193,5 +199,20 @@ export default {
 .btn-dowload {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.text-content {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 9999;
+}
+
+.content {
+  
 }
 </style>

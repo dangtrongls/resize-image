@@ -10,31 +10,32 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'croppie/croppie.css'
 import router from './router'
 import VuejsClipper from 'vuejs-clipper'
-// import Toast from "vue-toastification"
-// import "vue-toastification/dist/index.css"
 import plugin from '@serializedowen/vue-img-watermark'
 import Toast from "vue-toastification"
 import "vue-toastification/dist/index.css"
+// import { ImageEditor } from '@toast-ui/vue-image-editor';
+// import Moveable from "moveable";
+
 
 Vue.config.productionTip = false
 Vue.use(VueCroppie)
 Vue.use(BootstrapVueIcons)
 Vue.use(BootstrapVue)
 Vue.use(plugin)
-Vue.use(VuejsClipper, {　
+
+Vue.use(VuejsClipper, {
     components: {
         clipperBasic: true,
-        clipperPreview: true　
+        clipperPreview: true
     }
-})
-
+});
 Vue.use(Toast, {
     transition: "Vue-Toastification__bounce",
     maxToasts: 20,
     newestOnTop: true,
 });
 
-Vue.prototype.$urlAPI = "http://192.168.1.23:81/checkImage/public/api/";
+Vue.prototype.$urlAPI = "http://192.168.1.28:81/checkImage/public/api/";
 Vue.prototype.$siteName = "Tool Resize Image";
 
 Vue.prototype.$config = {
@@ -112,5 +113,6 @@ Vue.prototype.CallAPI = function(method, url, data, callResponse, callError) {
 
 new Vue({
     router,
+
     render: h => h(App)
 }).$mount('#app')
